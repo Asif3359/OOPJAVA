@@ -48,7 +48,27 @@ class Rectangle {
         }
     }
 }
+class Cylinder {
+    public double radius ;
+    public double height ;
 
+    public double lidArea()
+    {
+        return Math.PI*radius*radius;
+    }
+    public double totalSurfaceArea ()
+    {
+        return 2*lidArea()+circumference()*height;
+    }
+    public double volume()
+    {
+        return lidArea()*height;
+    }
+    public double circumference()
+    {
+        return  2*Math.PI*radius;
+    }
+}
 
 public class IntroOOP {
     // Class for Television
@@ -106,6 +126,13 @@ public class IntroOOP {
         System.out.println("perimeter of Rectangle :"+rec1.perimeter());
         System.out.println("isSquare of Rectangle :"+rec1.isSquare());
 
+        Cylinder  cyl1 = new Cylinder();
+        cyl1.height = 10 ;
+        cyl1.radius = 10 ;
 
+        System.out.println("lidArea of Cylinder :"+cyl1.lidArea());
+        System.out.println("totalSurfaceArea of Cylinder :"+cyl1.totalSurfaceArea());
+        System.out.println("volume of Cylinder :"+cyl1.volume());
+        
     }
 }
