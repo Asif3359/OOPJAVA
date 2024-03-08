@@ -3,9 +3,33 @@ package IntroductionOOP;
 /*
  * Basic Intro of oop in java
  */
-public class IntroOOP {
+// Class for CIrcle
+/*
+* This class outside IntroOOP Class 
+ */
+class circle {
+    public double radius;
 
-    public class Television {
+    public double area() {
+        return Math.PI * radius * radius;
+    }
+
+    public double perimeter() {
+        return 2 * Math.PI * radius;
+    }
+
+    public double circumference() {
+        return perimeter();
+    }
+
+}
+
+public class IntroOOP {
+    // Class for Television
+    /*
+     * This class inside IntroOOP Class
+     */
+    class Television {
         private int channel;
         private int volume;
 
@@ -28,9 +52,25 @@ public class IntroOOP {
     }
 
     public static void main(String[] args) {
-        IntroOOP intro = new IntroOOP();
-        Television t1 = intro.new Television();
+        IntroOOP intro = new IntroOOP(); // for inside class
+        Television t1 = intro.new Television(); // for inside class
         t1.setChannel(10);
         System.out.println("Channel: " + t1.getChannel());
+
+        circle c1 = new circle(); // for outside class
+        circle c2 = new circle(); // for outside class
+
+        c1.radius = 2.5;
+        c2.radius = 7;
+
+        System.out.println("Area Of Circle-1: " + c1.area());
+        System.out.println("Area Of Circle-2: " + c2.area());
+
+        System.out.println("perimeter Of Circle-1: " + c1.perimeter());
+        System.out.println("perimeter Of Circle-2: " + c2.perimeter());
+
+        System.out.println("circumference Of Circle-1: " + c1.circumference());
+        System.out.println("circumference Of Circle-2: " + c2.circumference());
+
     }
 }
