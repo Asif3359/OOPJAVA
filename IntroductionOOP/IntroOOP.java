@@ -10,6 +10,15 @@ package IntroductionOOP;
 class circle {
     public double radius;
 
+    // constructor of circle
+    public circle() {
+        this.radius = 0;
+    }
+
+    public circle(double radius) {
+        this.radius = radius;
+    }
+
     public double area() {
         return Math.PI * radius * radius;
     }
@@ -65,6 +74,7 @@ class Cylinder {
         return 2 * Math.PI * radius;
     }
 }
+
 class Student {
     public int roll;
     public String name;
@@ -87,7 +97,8 @@ class Student {
     }
 
     public String toString() {
-        return "Roll No:" + roll + "\n" + "Name:" + name + "\n" + "Course:" + course + "\n" +"Total :"+total()+"\n";
+        return "Roll No:" + roll + "\n" + "Name:" + name + "\n" + "Course:" + course + "\n" + "Total :" + total()
+                + "\n";
     }
 }
 
@@ -95,6 +106,8 @@ public class IntroOOP {
     // Class for Television
     /*
      * This class inside IntroOOP Class
+     * and
+     * data hiding
      */
     class Television {
         private int channel;
@@ -125,10 +138,11 @@ public class IntroOOP {
         System.out.println("Channel: " + t1.getChannel());
 
         circle c1 = new circle(); // for outside class
-        circle c2 = new circle(); // for outside class
+        circle c2 = new circle(4); // for outside class
 
-        c1.radius = 2.5;
-        c2.radius = 7;
+        // value is assigned by constructor
+        // c1.radius = 3;
+        // c2.radius = 7;
 
         System.out.println("Area Of Circle-1: " + c1.area());
         System.out.println("Area Of Circle-2: " + c2.area());
@@ -155,19 +169,19 @@ public class IntroOOP {
         System.out.println("totalSurfaceArea of Cylinder :" + cyl1.totalSurfaceArea());
         System.out.println("volume of Cylinder :" + cyl1.volume());
 
-        Student s=new Student();
-        
-        s.roll=1;
-        s.name="John";
-        s.course="CS";
-        s.m1=70;
-        s.m2=80;
-        s.m3=65;
-        
-        System.out.println("Total :"+s.total());
-        System.out.println("Average :"+s.average());
-        
-        System.out.println("Details:\n "+ s );
+        Student s = new Student();
+
+        s.roll = 1;
+        s.name = "John";
+        s.course = "CS";
+        s.m1 = 70;
+        s.m2 = 80;
+        s.m3 = 65;
+
+        System.out.println("Total :" + s.total());
+        System.out.println("Average :" + s.average());
+
+        System.out.println("Details:\n " + s);
 
     }
 }
