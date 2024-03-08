@@ -24,6 +24,32 @@ class circle {
 
 }
 
+class Rectangle {
+    public double length ;
+    public double breadth ;
+
+    public double area()
+    {
+        return length*breadth;
+    }
+    public double perimeter ()
+    {
+        return 2*(length+breadth);
+    }
+    public boolean isSquare()
+    {
+        if(length == breadth)
+        {
+            return true ;
+        }
+        else
+        {
+            return false;
+        }
+    }
+}
+
+
 public class IntroOOP {
     // Class for Television
     /*
@@ -71,6 +97,15 @@ public class IntroOOP {
 
         System.out.println("circumference Of Circle-1: " + c1.circumference());
         System.out.println("circumference Of Circle-2: " + c2.circumference());
+
+        Rectangle rec1 = new Rectangle();
+        rec1.breadth = 4 ;
+        rec1.length = 4 ;
+
+        System.out.println("Area of Rectangle :"+rec1.area());
+        System.out.println("perimeter of Rectangle :"+rec1.perimeter());
+        System.out.println("isSquare of Rectangle :"+rec1.isSquare());
+
 
     }
 }
