@@ -60,6 +60,8 @@ public class Overriding {
         // Super sup1 = new Sub();
         // sup1.display();
 
+        //LuxaryCar c = new Car(); // not allowed
+
         LuxaryCar c = new LuxaryCar();
         c.start();
         c.accelerate();
